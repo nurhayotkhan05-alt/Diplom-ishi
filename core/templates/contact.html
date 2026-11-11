@@ -1,0 +1,108 @@
+{% load static %}
+<!doctype html>
+<html lang="uz">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aloqa | NEWSROOM</title>
+    <meta name="description" content="NEWSROOM — O‘zbekiston va dunyo yangiliklari, tahlil va maqolalar.">
+    <meta property="og:title" content="Aloqa | NEWSROOM">
+    <meta property="og:description" content="Kun yangiliklari va chuqur tahlil.">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+
+<body>
+    <div class="topline">
+        <div class="container"><span><strong>THE DAILY EDITION</strong> &nbsp; · &nbsp; Mustaqil yangiliklar
+                nashri</span><span>11-NOYABR, 2026 &nbsp; / &nbsp; Toshkent</span></div>
+    </div>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-main">
+                <a class="brand" href="{% url 'home' %}">NEWSROOM<span>.</span><small>HAQIQAT. TAHLIL.
+                        PERSPEKTIVA.</small></a>
+                <nav class="nav">
+                    <a href="{% url 'home' %}">Bosh sahifa</a><a href="{% url 'news_list' %}">Yangiliklar</a><a
+                        href="{% url 'categories' %}">Kategoriyalar</a><a href="{% url 'about' %}">Biz haqimizda</a><a
+                        href="{% url 'contact' %}" class="active">Aloqa</a>
+                </nav>
+                <div class="header-actions"><button class="icon-btn" data-search-toggle
+                        aria-label="Qidiruv">⌕</button><a class="btn btn-dark" href="{% url 'login' %}">Kirish ↗</a><button
+                        class="menu-toggle" aria-label="Menyu">☰</button></div>
+            </div>
+            <div class="search-panel">
+                <form action="{% url 'news_list' %}"><input data-news-search placeholder="Yangiliklarni qidiring..."
+                        aria-label="Qidiruv"><button class="btn btn-primary">Qidirish</button></form>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <div class="container">
+                <div class="eyebrow">BOG‘LANISH</div>
+                <h1>Biz bilan aloqada bo‘ling<span style="color:var(--red)">.</span></h1>
+                <p>Taklif, savol yoki hamkorlik bo‘yicha murojaatingizni yuboring. Tahririyat siz bilan bog‘lanadi.</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container split">
+                <form class="form-card" data-demo-form>
+                    <h2>Murojaat yuborish</h2>
+                    <div class="notice"></div>
+                    <div class="form-grid">
+                        <div class="field"><label>Ismingiz</label><input required placeholder="Ism familiya"></div>
+                        <div class="field"><label>Email</label><input type="email" required
+                                placeholder="name@example.com"></div>
+                    </div>
+                    <div class="field"><label>Mavzu</label><input required placeholder="Murojaat mavzusi"></div>
+                    <div class="field"><label>Xabar</label><textarea required
+                            placeholder="Xabaringizni yozing..."></textarea></div><button
+                        class="btn btn-primary">Xabarni yuborish ↗</button>
+                </form>
+                <aside class="side-panel">
+                    <h3>Tahririyat bilan aloqa</h3>
+                    <p>✉ &nbsp; info@newsroom.uz</p>
+                    <p>☎ &nbsp; +998 00 000 00 00</p>
+                    <p>⌖ &nbsp; Toshkent, O‘zbekiston</p>
+                    <p style="color:var(--muted);font-size:12px">Ish vaqti: Dushanba — Juma, 09:00–18:00</p>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">NEWSROOM<span>.</span></div>
+                    <p>Kun yangiliklari, chuqur tahlil va jamiyatdagi muhim voqealar — barchasi bir joyda.</p>
+                </div>
+                <div>
+                    <h4>Bo‘limlar</h4>
+                    <div class="footer-links"><a href="{% url 'news_list' %}">So‘nggi yangiliklar</a><a
+                            href="{% url 'categories' %}">Kategoriyalar</a><a href="{% url 'news_list' %}">Eng mashhurlar</a></div>
+                </div>
+                <div>
+                    <h4>Nashr</h4>
+                    <div class="footer-links"><a href="{% url 'about' %}">Biz haqimizda</a><a
+                            href="{% url 'contact' %}">Bog‘lanish</a><a href="{% url 'login' %}">Shaxsiy kabinet</a></div>
+                </div>
+                <div>
+                    <h4>Yangiliklardan xabardor bo‘ling</h4>
+                    <form data-newsletter><input class="search-inline" type="email" required
+                            placeholder="Email manzilingiz"><button class="btn btn-primary" style="margin-top:9px">Obuna
+                            bo‘lish</button>
+                        <p data-newsletter-note hidden></p>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 NEWSROOM. Barcha huquqlar himoyalangan.</span><span>Mas’uliyatli
+                    jurnalistika · Ochiq axborot</span></div>
+        </div>
+    </footer>
+    <script src="{% static 'assets/js/app.js' %}"></script>
+</body>
+
+</html>

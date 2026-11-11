@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="uz">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maqola | NEWSROOM</title>
+    <meta name="description" content="NEWSROOM — O‘zbekiston va dunyo yangiliklari, tahlil va maqolalar.">
+    <meta property="og:title" content="Maqola | NEWSROOM">
+    <meta property="og:description" content="Kun yangiliklari va chuqur tahlil.">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+
+<body>
+    <div class="topline">
+        <div class="container"><span><strong>THE DAILY EDITION</strong> &nbsp; · &nbsp; Mustaqil yangiliklar
+                nashri</span><span>11-NOYABR, 2026 &nbsp; / &nbsp; Toshkent</span></div>
+    </div>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-main">
+                <a class="brand" href="{% url 'home' %}">NEWSROOM<span>.</span><small>HAQIQAT. TAHLIL.
+                        PERSPEKTIVA.</small></a>
+                <nav class="nav">
+                    <a href="{% url 'home' %}">Bosh sahifa</a><a href="{% url 'news_list' %}">Yangiliklar</a><a
+                        href="{% url 'categories' %}">Kategoriyalar</a><a href="{% url 'about' %}">Biz haqimizda</a><a
+                        href="{% url 'contact' %}">Aloqa</a>
+                </nav>
+                <div class="header-actions"><button class="icon-btn" data-search-toggle
+                        aria-label="Qidiruv">⌕</button><a class="btn btn-dark" href="{% url 'login' %}">Kirish ↗</a><button
+                        class="menu-toggle" aria-label="Menyu">☰</button></div>
+            </div>
+            <div class="search-panel">
+                <form action="{% url 'news_list' %}"><input data-news-search placeholder="Yangiliklarni qidiring..."
+                        aria-label="Qidiruv"><button class="btn btn-primary">Qidirish</button></form>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container article-layout">
+            <article>
+                <div class="article-head">
+                    <div class="eyebrow">DUNYO · MAXSUS REPORTAJ</div>
+                    <h1>Shaharlar ertangi kunni qanday qurmoqda?</h1>
+                    <p class="article-lead">Yashil hududlar, aqlli transport va yangi arxitektura — zamonaviy shaharlar
+                        kelajak hayotini bugundan shakllantirmoqda.</p>
+                    <div class="article-byline"><span>✍ NEWSROOM tahririyati</span><span>11-noyabr, 2026</span><span>◉ 2
+                            408 ko‘rish</span></div>
+                </div>
+                <img class="article-cover"
+                    src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1500&q=90"
+                    alt="Shahar manzarasi">
+                <div class="article-content">
+                    <p>Shaharlar doimiy o‘zgarishda. Aholi sonining ortishi, iqlim o‘zgarishi va texnologik taraqqiyot
+                        urbanistik rejalashtirishga yangicha yondashuvni talab qilmoqda. Bugun dunyoning ko‘plab
+                        shaharlarida inson uchun qulay va barqaror muhit yaratish ustuvor vazifaga aylangan.</p>
+                    <h2>Yashil makon — yangi ustuvorlik</h2>
+                    <p>Jamoat bog‘lari, piyodalar yo‘laklari va velosiped infratuzilmasi shahar hayotining muhim qismiga
+                        aylanmoqda. Bunday yechimlar nafaqat ekologik muhitni yaxshilaydi, balki odamlarning kundalik
+                        hayot sifatiga ham ijobiy ta’sir ko‘rsatadi.</p>
+                    <p>Mutaxassislarning fikricha, kelajak shahri texnologiya va tabiat o‘rtasidagi muvozanatni topa
+                        olgan makon bo‘ladi. Bu jarayonda aholining fikri va ehtiyojlari ham muhim o‘rin tutadi.</p>
+                    <h2>Texnologiya va inson manfaatlari</h2>
+                    <p>Aqlli transport tizimlari, energiya tejamkor binolar va raqamli xizmatlar shahar boshqaruvini
+                        samaraliroq qilishi mumkin. Biroq har qanday yangilikning markazida inson manfaatlari turishi
+                        lozim.</p>
+                </div>
+                <div class="share-row"><button data-share>Ulashish ↗</button><button data-bookmark>♡
+                        Saqlash</button><button onclick="window.print()">Chop etish</button></div>
+                <div class="comment-box">
+                    <h3>Izoh qoldirish</h3>
+                    <p style="color:var(--muted);font-size:13px">Fikr bildirish uchun tizimga kiring.</p>
+                    <form data-demo-form>
+                        <div class="field"><label>Izohingiz</label><textarea required
+                                placeholder="Fikringizni yozing..."></textarea></div><button
+                            class="btn btn-primary">Yuborish</button>
+                        <div class="notice"></div>
+                    </form>
+                </div>
+            </article>
+            <aside>
+                <div class="side-panel">
+                    <h3>O‘xshash yangiliklar</h3>
+                    <div class="mini-story"><img
+                            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=220&q=75"><span><small>IQTISODIYOT</small><strong>Global
+                                bozorlarda yangi imkoniyatlar</strong></span></div>
+                    <div class="mini-story"><img
+                            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=220&q=75"><span><small>TEXNOLOGIYA</small><strong>Sun’iy
+                                intellekt yangi davrni boshlab bermoqda</strong></span></div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">NEWSROOM<span>.</span></div>
+                    <p>Kun yangiliklari, chuqur tahlil va jamiyatdagi muhim voqealar — barchasi bir joyda.</p>
+                </div>
+                <div>
+                    <h4>Bo‘limlar</h4>
+                    <div class="footer-links"><a href="{% url 'news_list' %}">So‘nggi yangiliklar</a><a
+                            href="{% url 'categories' %}">Kategoriyalar</a><a href="{% url 'news_list' %}">Eng mashhurlar</a></div>
+                </div>
+                <div>
+                    <h4>Nashr</h4>
+                    <div class="footer-links"><a href="{% url 'about' %}">Biz haqimizda</a><a
+                            href="{% url 'contact' %}">Bog‘lanish</a><a href="{% url 'login' %}">Shaxsiy kabinet</a></div>
+                </div>
+                <div>
+                    <h4>Yangiliklardan xabardor bo‘ling</h4>
+                    <form data-newsletter><input class="search-inline" type="email" required
+                            placeholder="Email manzilingiz"><button class="btn btn-primary" style="margin-top:9px">Obuna
+                            bo‘lish</button>
+                        <p data-newsletter-note hidden></p>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 NEWSROOM. Barcha huquqlar himoyalangan.</span><span>Mas’uliyatli
+                    jurnalistika · Ochiq axborot</span></div>
+        </div>
+    </footer>
+    <script src="{% static 'assets/js/app.js' %}"></script>
+</body>
+
+</html>

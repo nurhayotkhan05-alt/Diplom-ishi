@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="uz">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yangiliklar | NEWSROOM</title>
+    <meta name="description" content="NEWSROOM — O‘zbekiston va dunyo yangiliklari, tahlil va maqolalar.">
+    <meta property="og:title" content="Yangiliklar | NEWSROOM">
+    <meta property="og:description" content="Kun yangiliklari va chuqur tahlil.">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+
+<body>
+    <div class="topline">
+        <div class="container"><span><strong>THE DAILY EDITION</strong> &nbsp; · &nbsp; Mustaqil yangiliklar
+                nashri</span><span>11-NOYABR, 2026 &nbsp; / &nbsp; Toshkent</span></div>
+    </div>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-main">
+                <a class="brand" href="{% url 'home' %}">NEWSROOM<span>.</span><small>HAQIQAT. TAHLIL.
+                        PERSPEKTIVA.</small></a>
+                <nav class="nav">
+                    <a href="{% url 'home' %}">Bosh sahifa</a><a href="{% url 'news_list' %}" class="active">Yangiliklar</a><a
+                        href="{% url 'categories' %}">Kategoriyalar</a><a href="{% url 'about' %}">Biz haqimizda</a><a
+                        href="{% url 'contact' %}">Aloqa</a>
+                </nav>
+                <div class="header-actions"><button class="icon-btn" data-search-toggle
+                        aria-label="Qidiruv">⌕</button><a class="btn btn-dark" href="{% url 'login' %}">Kirish ↗</a><button
+                        class="menu-toggle" aria-label="Menyu">☰</button></div>
+            </div>
+            <div class="search-panel">
+                <form action="{% url 'news_list' %}"><input data-news-search placeholder="Yangiliklarni qidiring..."
+                        aria-label="Qidiruv"><button class="btn btn-primary">Qidirish</button></form>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <div class="container">
+                <div class="eyebrow">NEWSROOM / NASHR</div>
+                <h1>Barcha yangiliklar<span style="color:var(--red)">.</span></h1>
+                <p>O‘zbekiston va dunyodagi eng so‘nggi voqealar. Kategoriya bo‘yicha saralang yoki kerakli mavzuni
+                    qidiring.</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="toolbar">
+                    <div class="filters" data-filter-group><button class="filter-btn active"
+                            data-filter="all">Barchasi</button><button class="filter-btn"
+                            data-filter="dunyo">Dunyo</button><button class="filter-btn"
+                            data-filter="texnologiya">Texnologiya</button><button class="filter-btn"
+                            data-filter="iqtisodiyot">Iqtisodiyot</button><button class="filter-btn"
+                            data-filter="madaniyat">Madaniyat</button><button class="filter-btn"
+                            data-filter="sport">Sport</button><button class="filter-btn" data-filter="hayot tarzi">Hayot
+                            Tarzi</button></div><input class="search-inline" data-news-search
+                        placeholder="Yangilik qidirish...">
+                </div>
+                <div class="cards">
+                    <article class="news-card" data-category="dunyo"><a href="{% url 'article_detail' %}">
+                            <div class="card-image"><img
+                                    src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=900&q=85"
+                                    alt="Dunyo shaharlari kelajak sari qanday o‘zgarmoqda?"></div>
+                        </a>
+                        <div class="card-body">
+                            <div class="card-meta"><span class="tag">DUNYO</span><span>11.11.2026</span></div>
+                            <h3 class="card-title"><a href="{% url 'article_detail' %}">Dunyo shaharlari kelajak sari qanday
+                                    o‘zgarmoqda?</a></h3>
+                            <p class="card-desc">Yangi shaharsozlik, yashil hududlar va aqlli transport tizimlari hayot
+                                tarzini qayta shakllantirmoqda.</p>
+                            <div class="card-foot"><span>◉ 1280 ko‘rish · Tahririyat</span><button class="bookmark"
+                                    data-bookmark aria-label="Saqlash">♡</button></div>
+                        </div>
+                    </article>
+                    <article class="news-card" data-category="texnologiya"><a href="{% url 'article_detail' %}">
+                            <div class="card-image"><img
+                                    src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=85"
+                                    alt="Sun’iy intellekt yangi davrni boshlab bermoqda"></div>
+                        </a>
+                        <div class="card-body">
+                            <div class="card-meta"><span class="tag">TEXNOLOGIYA</span><span>11.11.2026</span></div>
+                            <h3 class="card-title"><a href="{% url 'article_detail' %}">Sun’iy intellekt yangi davrni boshlab
+                                    bermoqda</a></h3>
+                            <p class="card-desc">Texnologiyalar ijod, ta’lim va kundalik ish jarayonlariga tobora chuqur
+                                kirib bormoqda.</p>
+                            <div class="card-foot"><span>◉ 1707 ko‘rish · Tahririyat</span><button class="bookmark"
+                                    data-bookmark aria-label="Saqlash">♡</button></div>
+                        </div>
+                    </article>
+                    <article class="news-card" data-category="iqtisodiyot"><a href="{% url 'article_detail' %}">
+                            <div class="card-image"><img
+                                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85"
+                                    alt="Global bozorlarda yangi imkoniyatlar"></div>
+                        </a>
+                        <div class="card-body">
+                            <div class="card-meta"><span class="tag">IQTISODIYOT</span><span>11.11.2026</span></div>
+                            <h3 class="card-title"><a href="{% url 'article_detail' %}">Global bozorlarda yangi imkoniyatlar</a></h3>
+                            <p class="card-desc">Mutaxassislar iqtisodiy o‘sish va investitsiya yo‘nalishlaridagi muhim
+                                o‘zgarishlarni tahlil qildi.</p>
+                            <div class="card-foot"><span>◉ 2134 ko‘rish · Tahririyat</span><button class="bookmark"
+                                    data-bookmark aria-label="Saqlash">♡</button></div>
+                        </div>
+                    </article>
+                    <article class="news-card" data-category="madaniyat"><a href="{% url 'article_detail' %}">
+                            <div class="card-image"><img
+                                    src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=85"
+                                    alt="Zamonaviy san’at va yangi avlod ijodkorlari"></div>
+                        </a>
+                        <div class="card-body">
+                            <div class="card-meta"><span class="tag">MADANIYAT</span><span>11.11.2026</span></div>
+                            <h3 class="card-title"><a href="{% url 'article_detail' %}">Zamonaviy san’at va yangi avlod
+                                    ijodkorlari</a></h3>
+                            <p class="card-desc">Ijodkorlar an’anaviy qarashlarni zamonaviy uslublar bilan
+                                uyg‘unlashtirmoqda.</p>
+                            <div class="card-foot"><span>◉ 2561 ko‘rish · Tahririyat</span><button class="bookmark"
+                                    data-bookmark aria-label="Saqlash">♡</button></div>
+                        </div>
+                    </article>
+                    <article class="news-card" data-category="sport"><a href="{% url 'article_detail' %}">
+                            <div class="card-image"><img
+                                    src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=900&q=85"
+                                    alt="Sport maydonlarida hafta voqealari"></div>
+                        </a>
+                        <div class="card-body">
+                            <div class="card-meta"><span class="tag">SPORT</span><span>11.11.2026</span></div>
+                            <h3 class="card-title"><a href="{% url 'article_detail' %}">Sport maydonlarida hafta voqealari</a></h3>
+                            <p class="card-desc">Musobaqalar, rekordlar va sport olamidagi eng muhim yangiliklar
+                                jamlanmasi.</p>
+                            <div class="card-foot"><span>◉ 2988 ko‘rish · Tahririyat</span><button class="bookmark"
+                                    data-bookmark aria-label="Saqlash">♡</button></div>
+                        </div>
+                    </article>
+                    <article class="news-card" data-category="hayot tarzi"><a href="{% url 'article_detail' %}">
+                            <div class="card-image"><img
+                                    src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85"
+                                    alt="Minimalizm: kamroq bilan ko‘proq yashash"></div>
+                        </a>
+                        <div class="card-body">
+                            <div class="card-meta"><span class="tag">HAYOT TARZI</span><span>11.11.2026</span></div>
+                            <h3 class="card-title"><a href="{% url 'article_detail' %}">Minimalizm: kamroq bilan ko‘proq yashash</a>
+                            </h3>
+                            <p class="card-desc">Oddiy odatlar, tartibli makon va ongli tanlovlar kundalik hayot
+                                sifatini yaxshilashi mumkin.</p>
+                            <div class="card-foot"><span>◉ 3415 ko‘rish · Tahririyat</span><button class="bookmark"
+                                    data-bookmark aria-label="Saqlash">♡</button></div>
+                        </div>
+                    </article>
+                </div>
+                <div class="pagination"><button
+                        class="active">1</button><button>2</button><button>3</button><button>→</button></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">NEWSROOM<span>.</span></div>
+                    <p>Kun yangiliklari, chuqur tahlil va jamiyatdagi muhim voqealar — barchasi bir joyda.</p>
+                </div>
+                <div>
+                    <h4>Bo‘limlar</h4>
+                    <div class="footer-links"><a href="{% url 'news_list' %}">So‘nggi yangiliklar</a><a
+                            href="{% url 'categories' %}">Kategoriyalar</a><a href="{% url 'news_list' %}">Eng mashhurlar</a></div>
+                </div>
+                <div>
+                    <h4>Nashr</h4>
+                    <div class="footer-links"><a href="{% url 'about' %}">Biz haqimizda</a><a
+                            href="{% url 'contact' %}">Bog‘lanish</a><a href="{% url 'login' %}">Shaxsiy kabinet</a></div>
+                </div>
+                <div>
+                    <h4>Yangiliklardan xabardor bo‘ling</h4>
+                    <form data-newsletter><input class="search-inline" type="email" required
+                            placeholder="Email manzilingiz"><button class="btn btn-primary" style="margin-top:9px">Obuna
+                            bo‘lish</button>
+                        <p data-newsletter-note hidden></p>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>© 2026 NEWSROOM. Barcha huquqlar himoyalangan.</span><span>Mas’uliyatli
+                    jurnalistika · Ochiq axborot</span></div>
+        </div>
+    </footer>
+    <script src="{% static 'assets/js/app.js' %}"></script>
+</body>
+
+</html>
